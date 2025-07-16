@@ -1,0 +1,24 @@
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Jost;
+	font-size: 18px;
+	
+
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+body{
+	background-color: white;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vladislav Plotnikov</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+	<header><p style="font-size: 42px;">Vladislav Plotnikov</p></header>
+	<center id="user-nav" >
+		<a id="Photos" onclick="openPhotos()">Photos</a>
+		<a id="Stats" onclick="openStats()">Stats</a>
+		<a id="Contact" onclick="openContact()">Contact</a>
+	</center>
+	<div class="stats" id="stats-block">
+		<div class="stats_photo">
+			<img src="assets/img/2025-07-16 11.29.32.jpg" alt="">
+		</div>
+		<div class="stats_stats">
+
+			<p>The glamorous bitch - is me</p>
+			<p>Designer, Model</p>
+			<p>Age: 18</p>
+			<p>Height: 180cm</p>
+			<p>Weight: 55kg</p>
+			<p>Size: s/xs</p>
+		</div>
+		
+	</div>
+	<div class="contact" id="contact-block">
+		<h4>Social-networks</h4>
+		<p>
+			Instagram:
+			 <a href="#">Vladislav Plotnikov</a>
+		</p>
+		<p>
+			Telegram:
+			 <a href="t.me/@wiznkingprodark">@wiznkingprodark</a>
+		</p>
+		<br>
+		<h4>Email</h4>
+		<p>iCloud:
+			<a href="mailto:plotnicovvlad@icloud.com">plotnicovvlad@icloud.com</a>
+		</p>
+		<p>Yandex:
+			<a href="mailto:plotnicovvlad@yandex.ru">plotnicovvlad@yandex.ru</a>
+		</p>
+		<p>Gmail:
+			<a href="mailto:plotnicovvlad@gmail.com">plotnicovvlad@gmail.com</a>
+		</p>
+	</div>
+
+	<button class="closeButton" id="closeButton" onclick="closeMorePhoto()">Close</button>
+
+	<div class="allPhotos" id="allPhotos">
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.23.22.jpg" alt="">
+		</div>
+
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.17.11.jpg" alt="">
+		</div>
+
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.24.17.jpg" alt="">
+		</div>
+
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.47.22.jpg" alt="">
+		</div>
+
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.23.37.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.29.32.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 10.17.26.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 10.18.13.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 10.28.11.jpg" alt="">
+		</div>
+
+	</div>
+	<div class="container_content" id="photo-block" onclick="openMorePhoto()">
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.23.22.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.17.11.jpg" alt="">
+		</div>
+		<div class="content_block">
+				<img src="assets/img/2025-07-16 11.24.17.jpg" alt="">
+		</div>
+	</div>
+
+	
+
+
+
+	<div class="footer">
+		<center>
+			<p style="font-size: 18px;">© Vladislav Plotnikov 2025</p>
+		</center>
+	</div>
+
+	<script>
+		let photos = document.getElementById('Photos')
+		let stats = document.getElementById('Stats')
+		let contact = document.getElementById('Contact')
+		let statsBlock = document.getElementById('stats-block')
+		let photoBlock = document.getElementById('photo-block')
+		let contactBlock = document.getElementById('contact-block')
+		let allPhotos = document.getElementById('allPhotos')
+		let closeButton = document.getElementById('closeButton')
+
+		allPhotos.style.display = 'none'
+		closeButton.style.display = 'none'
+		statsBlock.style.display = 'none'
+		contactBlock.style.display = 'none'
+		photos.style.textDecoration = 'underline'
+
+		function openStats(){
+			contactBlock.style.display = 'none'
+			statsBlock.style.display = 'grid'
+			photoBlock.style.display = 'none'
+
+			photos.style.textDecoration = 'none'
+			contact.style.textDecoration = 'none'
+			stats.style.textDecoration = 'underline'
+
+		}
+		function openPhotos(){
+			contactBlock.style.display = 'none'
+			statsBlock.style.display = 'none'
+			photoBlock.style.display = 'grid'
+
+			photos.style.textDecoration = 'underline'
+			contact.style.textDecoration = 'none'
+			stats.style.textDecoration = 'none'
+		}
+		function openContact(){
+			photoBlock.style.display = 'none'
+			statsBlock.style.display = 'none'
+			contactBlock.style.display = 'block'
+
+			photos.style.textDecoration = 'none'
+			contact.style.textDecoration = 'underline'
+			stats.style.textDecoration = 'none'
+		}
+		function openMorePhoto(){
+			closeButton.style.display = 'block'
+			allPhotos.style.display = 'grid'
+
+		}
+		function closeMorePhoto(){
+			closeButton.style.display = 'none'
+			allPhotos.style.display = 'none'	
+		}
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
